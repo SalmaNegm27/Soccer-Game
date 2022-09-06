@@ -1,0 +1,10 @@
+﻿global using AutoMapper;
+global using ECommerce.Application;
+global using FluentValidation;
+global using Microsoft.AspNetCore.Mvc;
+global using Players.Entities;
+global using Players.UnitOfWorks;
+global using Players.ViewModels;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.EntityFrameworkCore;
+global using Players.Repositories;

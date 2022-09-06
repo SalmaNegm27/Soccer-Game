@@ -1,0 +1,14 @@
+﻿global using ECommerce.Application;
+global using System;
+global using Microsoft.EntityFrameworkCore;
+global  using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using AutoMapper;
+global using Teams.Entities;
+global using FluentValidation;
+global using Teams.ViewModels;
+global using Teams.Repositories;
+global using Microsoft.AspNetCore.Mvc;
+global using Teams.UnitOfWorks;
+global using Coaches.Entities;
+global using Players.Entities;
+global using System.Collections.Generic;
