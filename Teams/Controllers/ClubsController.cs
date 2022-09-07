@@ -15,32 +15,30 @@
         [HttpGet]
         public override async Task<IActionResult> GetAll()
         {
-            await base.GetAll();
-            return Ok();
+           return await base.GetAll();
+           
         }
 
         [Authorize(Roles = UserRoles.User)]
         [HttpGet("{id}")]
         public override async Task<IActionResult> Get(Guid id)
         {
-            await base.Get(id);
-            return Ok();
+           return await base.Get(id);
+            
         }
 
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public override async Task<IActionResult> Post(ClubViewModel clubViewModel)
         {
-            await base.Post(clubViewModel);
-            return Ok(clubViewModel);
+            return await base.Post(clubViewModel);
         }
 
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPut]
         public override async Task<IActionResult> Put(ClubViewModel clubViewModel)
         {
-            await base.Put(clubViewModel);
-            return Ok(clubViewModel);
+            return await base.Put(clubViewModel);
         }
         [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete]

@@ -32,18 +32,16 @@
         [HttpPost]
         public override async Task<IActionResult> Post(PlayerViewModel playerViewModel)
         {
-          await  base.Post(playerViewModel);
-            return Ok(playerViewModel);
+            return await base.Post(playerViewModel);
         }
 
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPut]
         public override async Task<IActionResult> Put(PlayerViewModel playerViewModel)
-            {
-             await base.Put(playerViewModel);
-            return Ok(playerViewModel);
-            }
-        [Authorize(Roles = UserRoles.Admin)]
+        {
+            return await base.Put(playerViewModel);
+        }
+            [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete]
         public override async Task<ActionResult> Delete(Guid id)
         {
